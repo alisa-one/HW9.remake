@@ -14,6 +14,14 @@ public class Sclad {
         return nameSclad;
     }
 
+    public static void setNameSclad(String nameSclad) {
+        Sclad.nameSclad = nameSclad;
+    }
+
+    public static void setAdressSclad(String adressSclad) {
+        Sclad.adressSclad = adressSclad;
+    }
+
     public Sclad (String nameSclad, String adressSclad){
         this.nameSclad= nameSclad;
         this.adressSclad = adressSclad;

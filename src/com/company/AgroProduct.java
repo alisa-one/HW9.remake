@@ -5,14 +5,11 @@ public class AgroProduct {
     private String owner;
 
 
-    public AgroProduct(String owner, Sclad sclad) {
+    public AgroProduct(String owner) {
         this.owner =owner;
 
     }
 
-    public AgroProduct(String s, String nameSclad, String owner) {
-        this.owner =owner;
-    }
 
 
 

@@ -8,7 +8,7 @@ public class VegeteType extends AgroProduct {
 
     public VegeteType(String owner, String kind, int volumeFact,
                       TypeDelivery typeDelivery, Sclad Sclad) {
-        super(owner,Sclad);
+        super(owner, Sclad);
         this.kind = kind;
         this.volumeFact = volumeFact;
         this.TypeDelivery = typeDelivery;
@@ -16,18 +16,34 @@ public class VegeteType extends AgroProduct {
 
 
     public VegeteType(String owner, Sclad sclad) {
-        super(owner,sclad);
+        super(owner, sclad);
     }
 
-    public VegeteType(String owner, String kind,  int volumeFact, TypeDelivery TypeDelivery) {
-        super( owner, Sclad.nameSclad,Sclad.adressSclad);
+    public VegeteType(String owner, String kind, int volumeFact, TypeDelivery TypeDelivery) {
+        super(owner, Sclad.nameSclad, Sclad.adressSclad);
 
         this.kind = kind;
-        this.volumeFact=volumeFact;
-        this.TypeDelivery= TypeDelivery;
+        this.volumeFact = volumeFact;
+        this.TypeDelivery = TypeDelivery;
 
     }
 
+    public void MakePropose() {
+        super(String AgroProduct);
+        System.out.println( Sclad.nameSclad + " продает " + volumeFact + " тыс.т. " + kind + " ");
+    }
+
+    public void  MakePropose (){
+        super(String AgroProduct);
+        System.out.println( Sclad.nameSclad + " продает "  + kind +"  " );
+            }
+
+     public void  MakePropose ()  {
+         super(String AgroProduct);
+         System.out.println( Sclad.nameSclad + " продает " + volumeFact + " тыс.т. "
+                         + kind + "тип доставки: "+TypeDelivery+ " ");
+
+     }
 
     public String getKind() {
         return kind;
@@ -38,7 +54,9 @@ public class VegeteType extends AgroProduct {
     }
 
     public String getInfo() {
-        return getInfo() + ", вид:  "+kind+", объем заказа:  "+volumeFact+" ";}
+        return getInfo() + ", вид:  " + kind + ", объем заказа:  " + volumeFact +
+                " ,  тип доставки:  " + TypeDelivery ;
+    }
 
 
 }
