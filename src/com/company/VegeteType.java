@@ -5,45 +5,34 @@ public class VegeteType extends AgroProduct {
     private String kind;
     private int volumeFact;
     private TypeDelivery TypeDelivery;
-
-    public VegeteType(String owner, String kind, int volumeFact,
-                      TypeDelivery typeDelivery, Sclad Sclad) {
-        super(owner, Sclad);
-        this.kind = kind;
-        this.volumeFact = volumeFact;
-        this.TypeDelivery = typeDelivery;
-    }
-
-
-    public VegeteType(String owner, Sclad sclad) {
-        super(owner, sclad);
-    }
+    private String owner;
 
     public VegeteType(String owner, String kind, int volumeFact, TypeDelivery TypeDelivery) {
-        super(owner, Sclad.nameSclad, Sclad.adressSclad);
-
+        super(owner);
         this.kind = kind;
         this.volumeFact = volumeFact;
         this.TypeDelivery = TypeDelivery;
-
     }
 
-    public void MakePropose() {
-        super(String AgroProduct);
-        System.out.println( Sclad.nameSclad + " продает " + volumeFact + " тыс.т. " + kind + " ");
+    public VegeteType(String owner) {
+        super(owner);
     }
 
-    public void  MakePropose (){
-        super(String AgroProduct);
-        System.out.println( Sclad.nameSclad + " продает "  + kind +"  " );
-            }
 
-     public void  MakePropose ()  {
-         super(String AgroProduct);
-         System.out.println( Sclad.nameSclad + " продает " + volumeFact + " тыс.т. "
-                         + kind + "тип доставки: "+TypeDelivery+ " ");
 
-     }
+
+    public  void MakePropose() {
+        super.getOwner();
+        this.kind = kind;
+        this.volumeFact = volumeFact;
+
+        System.out.println(getOwner()+
+        " продает " + kind + " " + volumeFact + " тыс.т. ");
+    }
+
+
+
+
 
     public String getKind() {
         return kind;
@@ -53,10 +42,11 @@ public class VegeteType extends AgroProduct {
         return volumeFact;
     }
 
-    public String getInfo() {
-        return getInfo() + ", вид:  " + kind + ", объем заказа:  " + volumeFact +
-                " ,  тип доставки:  " + TypeDelivery ;
+    public void getInfo() {
+        super.getInfo();System.out.println(" вид:  " + kind + ", объем заказа:  " + volumeFact +
+                " ,  тип доставки:  " + TypeDelivery);
     }
+
 
 
 }
