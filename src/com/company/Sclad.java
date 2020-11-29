@@ -1,39 +1,28 @@
 package com.company;
 
 public class Sclad {
-    private static String nameSclad;
-    private static String adressSclad;
-    private static Sclad Sclad;
+    private  String nameSclad;
+    private  String adressSclad;
 
 
-    public Sclad( String nameSclad, String adressSclad) {
-        this.nameSclad=nameSclad;
-        this.adressSclad=adressSclad;
+    public Sclad(String nameSclad, String adressSclad) {
+        this.nameSclad = nameSclad;
+        this.adressSclad = adressSclad;
     }
 
-    public String getAdressSclad() {
-        return adressSclad;
-    }
-
-    public static void setAdressSclad() {
-        Sclad.adressSclad = adressSclad;
-    }
-
-    public String getNameSclad() {
+    public  String getNameSclad() {
         return nameSclad;
     }
 
-    public static void setNameSclad() {
-        Sclad.nameSclad = nameSclad;
+    public  void setNameSclad(String nameSclad) {
+        this.nameSclad = nameSclad;
     }
 
-    public static com.company.Sclad getSclad() {
-        return Sclad;
+    public  String getAdressSclad() {
+        return adressSclad;
     }
 
-    public  void setSclad(com.company.Sclad Sclad) {
-        setNameSclad();
-        setAdressSclad();
-
+    public  void setAdressSclad(String adressSclad) {
+        this.adressSclad = adressSclad;
     }
 }

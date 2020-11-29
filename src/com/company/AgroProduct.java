@@ -1,40 +1,35 @@
 package com.company;
 
-public abstract class AgroProduct implements volumeChekable {
+public abstract class AgroProduct implements Cloneable {
 
-    private String owner;
+    private Apple owner;
 
 
-
-    public AgroProduct(String owner) {
+    public AgroProduct(Apple owner) {
         this.owner = owner;
 
     }
 
-    public String getOwner() {
+    public Apple getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) throws CloneNotSupportedException {
-        if (getOwner()=="ОсОО Рич") {
-            this.owner = owner;
-            clone();
-        } else {
-            throw new CloneNotSupportedException("Свойства объекта не клонируются ");
 
-        }
 
+    @Override
+    public String toString() {
+        return
+                "владелец:   " + owner ;
+    }
+
+
+
+    protected Apple setOwner() {
         this.owner = owner;
+        return owner;
     }
 
-    public void getInfo() {
-        System.out.println(" владелец: " + owner + " ");
-    }
-
-
-    public void MakePropose() {
+    public void clone(Apple objectB) {
 
     }
-
-
 }

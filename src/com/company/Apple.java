@@ -1,6 +1,6 @@
 package com.company;
 
-public final class Apple extends VegeteType implements Cloneable {
+public class Apple extends VegeteType {
 
     private String sort;
     private Sclad Sclad;
@@ -8,15 +8,12 @@ public final class Apple extends VegeteType implements Cloneable {
     private static String adressSclad;
 
 
-    public Apple(String owner, String kind, String sort, int volumeFact,
-                 TypeDelivery TypeDelivery) {
+    public Apple(String owner, String kind, int volumeFact, com.company.TypeDelivery TypeDelivery,
+                 String sort, com.company.Sclad sclad) {
         super(owner, kind, volumeFact, TypeDelivery);
         this.sort = sort;
-        this.nameSclad = nameSclad;
-        this.adressSclad = adressSclad;
-
+        Sclad = sclad;
     }
-
 
     public void setSclad(Sclad sclad) {
         this.Sclad = sclad;
@@ -33,19 +30,21 @@ public final class Apple extends VegeteType implements Cloneable {
     }
 
 
-    public void getInfo() {
-        super.getInfo();
-        System.out.println(" сорт:" + sort +
-                ", склад: " + Sclad.getNameSclad() + Sclad.getAdressSclad());
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ",  сорт:  " + sort  +
+                ",  имя и адрес склада: " + Sclad.getNameSclad() + Sclad.getAdressSclad() ;
     }
 
-    void display() {
-        System.out.printf("Person %s \n", sort);}
 
-        @Override
-        public Apple clone () throws CloneNotSupportedException {
+    @Override
+    public void clone(Apple objectB) {
+        super.clone(objectB.getOwner());
 
-            return (Apple) super.clone();
-        }
+
+
     }
+}
 
