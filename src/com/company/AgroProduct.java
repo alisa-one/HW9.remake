@@ -29,6 +29,8 @@ public abstract class AgroProduct implements Cloneable {
         return owner;
     }
 
+
+    @Override
     public void clone(Apple objectB) {
 
     }

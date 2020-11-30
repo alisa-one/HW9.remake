@@ -37,14 +37,11 @@ public class Apple extends VegeteType {
                 ",  сорт:  " + sort  +
                 ",  имя и адрес склада: " + Sclad.getNameSclad() + Sclad.getAdressSclad() ;
     }
-
+    
 
     @Override
     public void clone(Apple objectB) {
-        super.clone(objectB.getOwner());
-
-
-
+        Apple.this.setOwner();
     }
 }
 
